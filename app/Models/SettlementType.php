@@ -13,6 +13,9 @@ class SettlementType extends Model
     protected $primaryKey = 'key';
     public $timestamps = false;
     protected $fillable = ['name'];
+    protected $hidden = [
+        'key',
+    ];
 
     public function settlements(){
         return $this->hasMany(Settlement::class);

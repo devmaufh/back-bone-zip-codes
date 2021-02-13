@@ -17,6 +17,9 @@ class Settlement extends Model
         'settlement_type',
         'zip_code',
     ];
+    protected $hidden = [
+        'zip_code',
+    ];
 
     public function zipCode(){
         return $this->belongsTo(ZipCode::class);

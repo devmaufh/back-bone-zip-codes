@@ -13,6 +13,9 @@ class ZipCode extends Model
     public $timestamps = false;
     protected $fillable = ['locality','zip_code','municipality','federal_entity'];
 
+    protected $hidden = [
+        'key',
+    ];
 
     public function getZipCodeAttribute($value){
         return "".$value;
