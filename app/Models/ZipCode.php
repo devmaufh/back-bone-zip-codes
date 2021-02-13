@@ -13,6 +13,11 @@ class ZipCode extends Model
     public $timestamps = false;
     protected $fillable = ['locality','zip_code','municipality','federal_entity'];
 
+
+    public function getZipCodeAttribute($value){
+        return "".$value;
+    }
+
     public function municipality(){
         return $this->belongsTo(Municipality::class, 'municipality');
     }
